@@ -1,0 +1,370 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Maly Rosenstein</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Geist:wght@300;400;500;600;700;800&family=Geist+Mono:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js"></script>
+</head>
+<body>
+    <nav class="navbar" id="navbar">
+        <div class="container">
+            <div class="nav-brand">
+                <a href="#home">Maly Rosenstein</a>
+            </div>
+            <div class="nav-menu" id="navMenu">
+                <a href="#about" class="nav-link">About</a>
+                <a href="#projects" class="nav-link">Projects</a>
+                <a href="#contact" class="nav-link">Contact</a>
+                <button class="theme-toggle" id="themeToggle" aria-label="Toggle theme">
+                    <svg class="sun-icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <circle cx="12" cy="12" r="5"></circle>
+                        <line x1="12" y1="1" x2="12" y2="3"></line>
+                        <line x1="12" y1="21" x2="12" y2="23"></line>
+                        <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+                        <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+                        <line x1="1" y1="12" x2="3" y2="12"></line>
+                        <line x1="21" y1="12" x2="23" y2="12"></line>
+                        <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+                        <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+                    </svg>
+                    <svg class="moon-icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+                    </svg>
+                </button>
+            </div>
+            <button class="hamburger" id="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </nav>
+
+    <section class="hero" id="home">
+        <div class="hero-bg">
+            <div class="particles" id="particles"></div>
+        </div>
+        <div class="container">
+            <div class="hero-content">
+                <h1 class="hero-title">
+                    Hi, I'm <span class="gradient-text">Maly Rosenstein</span>
+                </h1>
+                <p class="hero-subtitle typewriter" id="typewriter"></p>
+                <p class="hero-description">
+                    Passionate about building reliable full-stack software with clean, maintainable code and strong performance.
+                    Fast learner with analytical thinking, problem-solving abilities, and a drive to contribute to open-source projects.
+                </p>
+                <div class="hero-buttons">
+                    <a href="#projects" class="btn btn-primary">View Projects</a>
+                    <a href="#contact" class="btn btn-secondary">Contact Me</a>
+                </div>
+                <div class="social-links">
+                    <a href="https://github.com/MalyRosenstein1" target="_blank" rel="noopener noreferrer" class="social-link" aria-label="GitHub">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
+                        </svg>
+                    </a>
+                    <a href="https://www.linkedin.com/in/maly-rosenstein-328913395/" target="_blank" rel="noopener noreferrer" class="social-link" aria-label="LinkedIn">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/>
+                        </svg>
+                    </a>
+                    <a href="https://wa.me/972522144815" target="_blank" rel="noopener noreferrer" class="social-link" aria-label="WhatsApp">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M20.52 3.48A11.86 11.86 0 0 0 12.06 0C5.5 0 .16 5.33.16 11.89c0 2.1.55 4.14 1.59 5.95L0 24l6.3-1.65a11.9 11.9 0 0 0 5.76 1.47h.01c6.56 0 11.9-5.34 11.9-11.9 0-3.18-1.24-6.16-3.45-8.44zM12.07 21.15h-.01a9.87 9.87 0 0 1-5.03-1.38l-.36-.21-3.74.98 1-3.64-.23-.37a9.86 9.86 0 0 1-1.51-5.26c0-5.45 4.44-9.89 9.9-9.89 2.64 0 5.12 1.03 6.99 2.9a9.82 9.82 0 0 1 2.89 6.99c0 5.45-4.44 9.88-9.9 9.88zm5.42-7.4c-.3-.15-1.76-.87-2.03-.97-.27-.1-.47-.15-.67.15-.2.3-.77.97-.94 1.16-.17.2-.35.22-.64.07-.3-.15-1.25-.46-2.38-1.47-.88-.78-1.47-1.75-1.64-2.05-.17-.3-.02-.46.13-.61.13-.13.3-.35.45-.52.15-.17.2-.3.3-.5.1-.2.05-.37-.02-.52-.08-.15-.67-1.61-.92-2.2-.24-.58-.49-.5-.67-.51h-.57c-.2 0-.52.07-.79.37-.27.3-1.04 1.02-1.04 2.48s1.07 2.88 1.22 3.08c.15.2 2.1 3.2 5.08 4.49.71.31 1.26.49 1.69.62.71.23 1.36.2 1.87.12.57-.09 1.76-.72 2.01-1.41.25-.7.25-1.29.17-1.41-.07-.13-.27-.2-.57-.35z"/>
+                        </svg>
+                    </a>
+                    <a href="https://mail.google.com/mail/?view=cm&fs=1&to=maly05271@gmail.com" target="_blank" rel="noopener noreferrer" class="social-link" aria-label="Email" title="maly05271@gmail.com">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+                            <polyline points="22,6 12,13 2,6"></polyline>
+                        </svg>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="about" id="about">
+        <div class="container">
+            <h2 class="section-title fade-in">About Me</h2>
+            <div class="about-content">
+                <div class="about-text">
+                    <p class="about-description">
+                        Software Developer with fast and efficient learning skills, strong analytical thinking,
+                        and proven problem-solving abilities. Focused on writing clean, maintainable code
+                        and actively contributing to open-source projects.
+                    </p>
+
+                    <div class="experience-section">
+                        <h3>Experience</h3>
+                        <div class="experience-card">
+                            <div class="experience-header">
+                                <h4>Full Stack Developer Intern</h4>
+                                <span class="company">Israel Tax Authority</span>
+                                <span class="year">2026</span>
+                            </div>
+                            <ul class="experience-list">
+                                <li>Developed full-stack features for an enterprise platform supporting workforce management and emergency operations</li>
+                                <li>Built C# backend components, implementing business logic and working with SQL Server databases and queries</li>
+                                <li>Led the research, design, and implementation of the platform's mobile architecture</li>
+                                <li>Delivered responsive Angular interfaces, adapting existing components and layouts for mobile workflows</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="education-section">
+                        <h3>Education</h3>
+                        <div class="education-card">
+                            <h4>Software Engineering Diploma</h4>
+                            <p class="school">The College of Management</p>
+                            <p class="gpa">2024 - 2026</p>
+                        </div>
+                        <div class="certifications">
+                            <p><strong>Kamatech — Ultra Code:</strong></p>
+                            <ul>
+                                <li>Software Engineering Excellence Program</li>
+                                <li>Algorithms and Data Structures</li>
+                                <li>Operating Systems</li>
+                                <li>Digital Systems</li>
+                                <li>Advanced Mathematics, including Discrete Mathematics, Linear Algebra, and Statistics</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="skills-container">
+                    <h3>Skills</h3>
+                    <div class="skills-category">
+                        <h4>Programming Languages</h4>
+                        <div class="skills-tags">
+                            <span class="skill-tag">Python</span>
+                            <span class="skill-tag">C</span>
+                            <span class="skill-tag">C++</span>
+                            <span class="skill-tag">C#</span>
+                            <span class="skill-tag">Java</span>
+                            <span class="skill-tag">JavaScript</span>
+                            <span class="skill-tag">TypeScript</span>
+                            <span class="skill-tag">Assembly (MIPS)</span>
+                        </div>
+                    </div>
+                    <div class="skills-category">
+                        <h4>Frontend</h4>
+                        <div class="skills-tags">
+                            <span class="skill-tag">HTML</span>
+                            <span class="skill-tag">CSS</span>
+                            <span class="skill-tag">Angular</span>
+                            <span class="skill-tag">React</span>
+                            <span class="skill-tag">React Query</span>
+                            <span class="skill-tag">Styled Components</span>
+                            <span class="skill-tag">Bootstrap</span>
+                            <span class="skill-tag">MUI</span>
+                        </div>
+                    </div>
+                    <div class="skills-category">
+                        <h4>Backend</h4>
+                        <div class="skills-tags">
+                            <span class="skill-tag">Node.js</span>
+                            <span class="skill-tag">Express.js</span>
+                            <span class="skill-tag">.NET</span>
+                            <span class="skill-tag">ADK</span>
+                            <span class="skill-tag">LangChain</span>
+                        </div>
+                    </div>
+                    <div class="skills-category">
+                        <h4>Databases</h4>
+                        <div class="skills-tags">
+                            <span class="skill-tag">SQL Server</span>
+                            <span class="skill-tag">PostgreSQL</span>
+                            <span class="skill-tag">MongoDB</span>
+                            <span class="skill-tag">BigQuery</span>
+                        </div>
+                    </div>
+                    <div class="skills-category">
+                        <h4>DevOps & Tools</h4>
+                        <div class="skills-tags">
+                            <span class="skill-tag">Git</span>
+                            <span class="skill-tag">GitLab</span>
+                            <span class="skill-tag">CI/CD</span>
+                            <span class="skill-tag">AWS</span>
+                            <span class="skill-tag">GCP</span>
+                            <span class="skill-tag">Docker</span>
+                            <span class="skill-tag">Kubernetes</span>
+                            <span class="skill-tag">Linux</span>
+                            <span class="skill-tag">Postman</span>
+                            <span class="skill-tag">Swagger</span>
+                        </div>
+                    </div>
+                    <div class="skills-category">
+                        <h4>AI Development Tools</h4>
+                        <div class="skills-tags">
+                            <span class="skill-tag">Cursor</span>
+                            <span class="skill-tag">Claude Code</span>
+                            <span class="skill-tag">GitHub Copilot</span>
+                            <span class="skill-tag">n8n</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="projects" id="projects">
+        <div class="container">
+            <h2 class="section-title fade-in">Projects</h2>
+            <p class="section-subtitle fade-in">Featured work from my portfolio and GitHub</p>
+
+            <div class="projects-grid" id="projectsGrid">
+                <div class="project-card featured fade-in">
+                    <div class="project-header">
+                        <h3>Angular E-Commerce App</h3>
+                        <span class="featured-badge">Featured</span>
+                    </div>
+                    <p class="project-description">
+                        A professional e-commerce food store built with Angular. Features dynamic product management,
+                        a functional shopping cart, custom pipes, and user activity tracking.
+                    </p>
+                    <div class="project-tags">
+                        <span class="tag">Angular</span>
+                        <span class="tag">TypeScript</span>
+                        <span class="tag">HTML</span>
+                        <span class="tag">CSS</span>
+                    </div>
+                    <a class="project-link" href="https://github.com/MalyRosenstein1/Angular-ECommerce-App" target="_blank" rel="noopener noreferrer">View on GitHub</a>
+                </div>
+
+                <div class="project-card featured fade-in">
+                    <div class="project-header">
+                        <h3>DocTrace API</h3>
+                        <span class="featured-badge">Featured</span>
+                    </div>
+                    <p class="project-description">
+                        A document management API built with Node.js, TypeScript, and MongoDB.
+                        Features path-based organization, automated audit logging, filtering, and PDF export.
+                    </p>
+                    <div class="project-tags">
+                        <span class="tag">Node.js</span>
+                        <span class="tag">Express.js</span>
+                        <span class="tag">TypeScript</span>
+                        <span class="tag">MongoDB</span>
+                    </div>
+                    <a class="project-link" href="https://github.com/MalyRosenstein1/DocTrace-API-project" target="_blank" rel="noopener noreferrer">View on GitHub</a>
+                </div>
+
+                <div class="project-card featured fade-in">
+                    <div class="project-header">
+                        <h3>MemDrive Engine</h3>
+                        <span class="featured-badge">Featured</span>
+                    </div>
+                    <p class="project-description">
+                        A high-performance in-memory food store data engine built with C#.
+                        Implements design patterns for dynamic schema management, atomic operations, and deep cloning.
+                    </p>
+                    <div class="project-tags">
+                        <span class="tag">C#</span>
+                        <span class="tag">.NET</span>
+                    </div>
+                    <a class="project-link" href="https://github.com/MalyRosenstein1/MemDrive-Engine-project" target="_blank" rel="noopener noreferrer">View on GitHub</a>
+                </div>
+
+                <div class="project-card featured fade-in">
+                    <div class="project-header">
+                        <h3>Sentiment Service Bot</h3>
+                        <span class="featured-badge">Featured</span>
+                    </div>
+                    <p class="project-description">
+                        An interactive AI service bot built with Python and the Gemini API.
+                        Features automated sentiment analysis, conversation history, and data visualization with Matplotlib.
+                    </p>
+                    <div class="project-tags">
+                        <span class="tag">Python</span>
+                        <span class="tag">Gemini API</span>
+                        <span class="tag">AI</span>
+                        <span class="tag">Matplotlib</span>
+                    </div>
+                    <a class="project-link" href="https://github.com/MalyRosenstein1/Sentiment-Service-Bot" target="_blank" rel="noopener noreferrer">View on GitHub</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="contact" id="contact">
+        <div class="container">
+            <h2 class="section-title fade-in">Get In Touch</h2>
+            <p class="section-subtitle fade-in">Feel free to reach out for collaborations</p>
+
+            <div class="contact-content">
+                <div class="contact-info">
+                    <div class="contact-item">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+                            <polyline points="22,6 12,13 2,6"></polyline>
+                        </svg>
+                        <div>
+                            <h4>Email</h4>
+                            <a href="https://mail.google.com/mail/?view=cm&fs=1&to=maly05271@gmail.com" target="_blank" rel="noopener noreferrer">maly05271@gmail.com</a>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
+                        </svg>
+                        <div>
+                            <h4>Phone</h4>
+                            <a href="tel:+972527163340">+972 52-716-3340</a>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M20.52 3.48A11.86 11.86 0 0 0 12.06 0C5.5 0 .16 5.33.16 11.89c0 2.1.55 4.14 1.59 5.95L0 24l6.3-1.65a11.9 11.9 0 0 0 5.76 1.47h.01c6.56 0 11.9-5.34 11.9-11.9 0-3.18-1.24-6.16-3.45-8.44zM12.07 21.15h-.01a9.87 9.87 0 0 1-5.03-1.38l-.36-.21-3.74.98 1-3.64-.23-.37a9.86 9.86 0 0 1-1.51-5.26c0-5.45 4.44-9.89 9.9-9.89 2.64 0 5.12 1.03 6.99 2.9a9.82 9.82 0 0 1 2.89 6.99c0 5.45-4.44 9.88-9.9 9.88zm5.42-7.4c-.3-.15-1.76-.87-2.03-.97-.27-.1-.47-.15-.67.15-.2.3-.77.97-.94 1.16-.17.2-.35.22-.64.07-.3-.15-1.25-.46-2.38-1.47-.88-.78-1.47-1.75-1.64-2.05-.17-.3-.02-.46.13-.61.13-.13.3-.35.45-.52.15-.17.2-.3.3-.5.1-.2.05-.37-.02-.52-.08-.15-.67-1.61-.92-2.2-.24-.58-.49-.5-.67-.51h-.57c-.2 0-.52.07-.79.37-.27.3-1.04 1.02-1.04 2.48s1.07 2.88 1.22 3.08c.15.2 2.1 3.2 5.08 4.49.71.31 1.26.49 1.69.62.71.23 1.36.2 1.87.12.57-.09 1.76-.72 2.01-1.41.25-.7.25-1.29.17-1.41-.07-.13-.27-.2-.57-.35z"/>
+                        </svg>
+                        <div>
+                            <h4>WhatsApp</h4>
+                            <a href="https://wa.me/972522144815" target="_blank" rel="noopener noreferrer">+972 52-214-4815</a>
+                        </div>
+                    </div>
+                </div>
+
+                <form class="contact-form" id="contactForm">
+                    <div class="form-group">
+                        <label for="name">Name</label>
+                        <input type="text" id="name" name="name" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email</label>
+                        <input type="email" id="email" name="email" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="message">Message</label>
+                        <textarea id="message" name="message" rows="5" required></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-primary">Send Message</button>
+                    <div class="form-message" id="formMessage"></div>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <p>&copy; 2026 Maly Rosenstein.</p>
+                <div class="footer-links">
+                    <a href="#home">Home</a>
+                    <a href="#about">About</a>
+                    <a href="#projects">Projects</a>
+                    <a href="#contact">Contact</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
